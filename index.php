@@ -19,7 +19,7 @@
 <body>
 
   <div class="container">
-    <div data-oahu-widget="quiz" 
+    <div data-oahu-widget="my_quiz" 
         data-oahu-id="<?php echo OAHU_QUIZ_ID ?>" 
         data-oahu-on='{ "registration:register" : "submit" }'>
     </div>
