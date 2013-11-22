@@ -11,7 +11,7 @@
     <link rel="stylesheet" type="text/css" href="./application.css">
     <script type="text/javascript">
       $(function() {
-        Oahu.init(<?php echo json_encode($oahu_init); ?>, OahuInitCallback);
+        Oahu.init({ appId: '<?php echo OAHU_APP_ID ?>' }, OahuInitCallback);
       });
     </script>
   </head>
@@ -20,7 +20,7 @@
 
   <div class="container">
     <div data-oahu-widget="quiz" 
-        data-oahu-id="<?php echo $oahu_quiz_id; ?>" 
+        data-oahu-id="<?php echo OAHU_QUIZ_ID ?>" 
         data-oahu-on='{ "registration:register" : "submit" }'>
     </div>
   </div>
