@@ -23,6 +23,9 @@ All templates are in the `templates` directory and ready to be customized.
 
 Fields for the registration form can be edited in the `application.js` file
 
+## Sharing
+
+Change the `share_hash` values to your needs in `application.js`.
 
 ## Deploying
 
