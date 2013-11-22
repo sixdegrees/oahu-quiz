@@ -1,0 +1,55 @@
+<div class="field {{name}}">
+    <label for="{{name}}">{{label}}</label>
+
+    {{#ifEqual type "text"}}
+
+        <input
+          class="{{type}} h5-{{name}}"
+          type="{{type}}"
+          id="{{name}}"
+          name="{{name}}"
+          value="{{value}}"
+
+          {{#placeholder}}placeholder="{{this}}"{{/placeholder}}
+          {{#pattern}}pattern="{{this}}"{{/pattern}}
+          {{#required}}required{{/required}}
+
+          data-h5-errorid="{{name}}_error"
+        />
+
+    {{/ifEqual}}  
+
+    {{#ifEqual type "checkbox"}}
+        <input
+          class="{{type}} h5-{{name}}"
+          type="{{type}}"
+          id="{{name}}"
+          name="{{name}}"
+          {{#ifEqual value "true"}}checked{{/ifEqual}}
+          placeholder="{{placeholder}}"
+          {{#required}}required{{/required}}
+          data-h5-errorid="{{name}}_error"
+        />
+
+    {{/ifEqual}}
+
+    {{#ifEqual type "select"}}
+        <select
+        class='{{type}} h5-{{name}}'
+        type="{{type}}"
+        id="{{name}}"
+        name="{{name}}"
+        {{#required}}required{{/required}}
+        data-h5-errorid="{{name}}_error">
+          {{#options}}
+              <option
+                label="{{label}}"
+                value="{{value}}"
+                {{#ifEqual ../value value}}selected{{/ifEqual}}
+              />
+          {{/options}}
+        </select>
+    {{/ifEqual}}
+
+    <div id="{{name}}_error" class='error' for="{{name}}">{{error}}</div>
+</div>

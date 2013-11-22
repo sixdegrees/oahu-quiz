@@ -1,0 +1,11 @@
+/* Only display one question at a time */
+.stack > *:not(.active) {
+  display: none !important;
+}
+
+
+/* highlight selected answer */
+li.selected a {
+  background: #0088cc;
+  color: #ffffff;
+}

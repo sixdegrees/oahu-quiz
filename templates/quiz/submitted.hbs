@@ -1,0 +1,8 @@
+<p>F&eacute;licitations, vous avez r&eacute;pondu &agrave; toutes les questions... </p>
+<p>et vous avez un super score de <strong>{{result.score}} points !</strong></p>
+{{#result.profile}}
+  {{>quiz_profile}}
+{{/result.profile}}
+<p>&Agrave; bient&ocirc;t !</p>
+
+<a class="btn btn-primary" data-oahu-action="quiz.reset">Recommencer</a>

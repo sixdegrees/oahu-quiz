@@ -1,0 +1,12 @@
+<div class='entry' id='entry_{{id}}' data-entry-id='{{id}}'>
+  <div class='question'>
+    <h2 class='title'>{{name}}</h2>
+  </div>
+  <ul class="nav nav-pills nav-stacked">
+    {{#answers}}
+      <li id="answer_{{id}}" data-oahu-action="quiz.answer" data-oahu-opts="{{id}}" class="answer">
+        <a href="#">{{name}}</a>
+      </li>
+    {{/answers}}
+  </ul>
+</div>
